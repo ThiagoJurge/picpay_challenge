@@ -1,0 +1,46 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Caches do MyPy, Pylint, etc.
+.mypy_cache/
+.pylint.d/
+.pytest_cache/
+
+# Arquivos de ambiente virtual
+venv/
+env/
+ENV/
+.venv/
+
+# Configs do VSCode
+.vscode/
+
+# Configs do PyCharm (se usar)
+.idea/
+
+# MacOS e Linux lixos
+.DS_Store
+Thumbs.db
+
+# Arquivos dotenv (opcional: manter ou ignorar)
+.env
+.env.*
+
+# Logs
+*.log
+
+# Coverage reports
+*.coverage
+htmlcov/
+
+# Arquivos de build
+build/
+dist/
+*.egg-info/
+
+# Docker
+*.pid
+*.db
+*.tar
