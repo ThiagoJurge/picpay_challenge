@@ -38,6 +38,6 @@ Repositório criado para cumprir o desafio elaborado pela [PicPay](https://githu
 
 ```bash
 git clone https://github.com/ThiagoJurge/picpay_challenge
-cd picpay-simplificado
+cd picpay_challenge
 docker-compose up -d
 ```
