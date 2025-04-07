@@ -19,10 +19,10 @@ Repositório criado para cumprir o desafio elaborado pela [PicPay](https://githu
 - Criação automática de carteira ao registrar usuário
 - Transferência de saldo entre carteiras
 - Regras de negócio:
-  - Apenas usuários **comuns** podem realizar transferências
+  - Usuáios **comuns** podem realizar qualquer tipo de transferência
+  - Usuários **lojistas** podem somente receber transferências
   - Validação de saldo antes de transferir
 - Histórico de transações por usuário
-- Rotas de teste criadas via Flask Blueprint
 
 ---
 
@@ -30,13 +30,14 @@ Repositório criado para cumprir o desafio elaborado pela [PicPay](https://githu
 
 ### 🔧 Pré-requisitos
 
-- Python 3.11+
-- Docker e Docker Compose
+- Docker
 
 ### 🚀 Rodando com Docker
 
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/picpay-simplificado.git
+git clone https://github.com/ThiagoJurge/picpay_challenge
 cd picpay-simplificado
+docker-compose up -d
+```
