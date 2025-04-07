@@ -14,9 +14,6 @@ teste_bp = Blueprint("teste", __name__, url_prefix="/teste")
 
 @teste_bp.route("/", methods=["GET"])
 def getUsers():
-    # Criar tabelas (só por segurança)
-    create_tables()
-
     # Criação dos usuários (evitar duplicados seria o ideal com try/except, aqui é só para testes rápidos)
     try:
         user1 = get_user_by_email("joao@email.com") or insert_user(

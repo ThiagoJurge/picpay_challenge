@@ -1,4 +1,5 @@
 from application.db import get_db_connection
+from application.scripts.validation import authorization
 
 
 def create_tables():
@@ -103,7 +104,10 @@ def make_transfer(payer_id, payee_id, amount):
         payer_balance = cur.fetchone()
         if not payer_balance or payer_balance[0] < amount:
             raise Exception("Saldo insuficiente")
-
+        authorization_status = authorization()
+        print(authorization_status)
+        if authorization_status == False:
+            raise Exception("Transação não autorizada.")
         # Debita
         cur.execute("UPDATE wallets SET balance = balance - %s WHERE user_id = %s", (amount, payer_id))
 

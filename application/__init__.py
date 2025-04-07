@@ -1,6 +1,5 @@
 import os
 from flask import Flask
-from .routes.auth import auth_bp
 from .routes.teste import teste_bp
 from application.models import create_tables  # importa a função que cria as tabelas
 
@@ -10,7 +9,6 @@ def create_app():
     from dotenv import load_dotenv
     load_dotenv()
 
-    app.register_blueprint(auth_bp)
     app.register_blueprint(teste_bp)
 
     @app.route("/hello")
